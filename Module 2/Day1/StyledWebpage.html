@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Times New Roman';
+        background-color: lightgray;
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        border: 3px solid blue; /* added as per requirement */
+      }
+
+      header {
+        padding: 5px;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: auto;
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 10px 5px 10px black;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-color: black;
+        text-align: center;
+        margin: auto;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
+      button {
+        background-color: yellow;
+        color: black;
+        padding: 6px;
+      }
+
+      button:hover {
+        background-color: whitesmoke;
+      }
+
+      p {
+        text-align: justify;
+        color: green;
+        border: 2px solid;
+        padding: 5px;
+      }
+
+      footer {
+        background-color: darkgray;
+        font-size: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 style="background-color: lightgrey; color: darkblue; font-size: 40px;">
+        Welcome to My Webpage
+      </h1>
+      <h2 style="font-weight: bold; color: green; font-size: 28px;">
+        Learning Web Development
+      </h2>
+    </header>
+
+    <nav>
+      <a href="#home" style="text-decoration: underline;">Home</a>
+      <a href="#about" style="text-decoration: underline;">About</a>
+      <a href="#contact" style="text-decoration: underline;">Contact</a>
+    </nav>
+
+    <img
+      src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg"
+      alt="image"
+    />
+
+    <table border="1"><br>
+      <caption>COURSES</caption>
+      <tr style="border-color: blue;">
+        <th>Courses</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td style="border-color: chartreuse;">Java</td>
+        <td style="border-color: chartreuse;">20,000</td>
+      </tr>
+      <tr>
+        <td style="border-color: chocolate;">Python</td>
+        <td style="border-color: crimson;">15,000</td>
+      </tr>
+    </table>
+
+    <button>Join Now!</button>
+
+    <p>
+      The Web Development course is designed to help learners build modern,
+      responsive, and interactive websites from scratch. It covers the core
+      technologies of the web — HTML, CSS, and JavaScript — and introduces
+      advanced concepts like frameworks, responsive design, and web performance.
+      Through hands-on projects, students learn how to structure content, style
+      pages beautifully, and make them dynamic using real-world coding
+      techniques. By the end of the course, learners gain the skills needed to
+      create professional web applications and start a career as a front-end or
+      full-stack web developer.
+    </p>
+
+    <form>
+      <label>Name</label><input type="text" placeholder="Enter your name" /><br />
+      <label>Email</label
+      ><input type="email" placeholder="Enter your Email-id" /><br />
+      <button>Submit</button>
+    </form>
+
+    <footer>&copy; 2025 MyWebsite.</footer>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    /* Common box style */
+    .box {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    /* 1️⃣ Block elements */
+    .block .box {
+      display: block;
+      width: 120px;
+    }
+
+    /* 2️⃣ Inline elements */
+    .inline .box {
+      display: inline;
+      width: 120px; /* won’t apply (ignored) */
+    }
+
+    /* 3️⃣ Inline-block elements */
+    .inline-block .box {
+      display: inline-block;
+      width: 120px;
+    }
+
+    /* 4️⃣ Flex container */
+    .flex {
+      display: flex;
+      gap: 10px;
+      background-color: #ddd;
+      padding: 10px;
+    }
+
+    .flex .box {
+      background-color: teal;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* 5️⃣ None (hidden) */
+    .none .box {
+      display: none;
+    }
+
+    .section {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Display Property Comparison</h1>
+
+  <div class="section block">
+    <h2>display: block;</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p>👉 Each box takes the full width and starts on a new line.</p>
+  </div>
+
+  <div class="section inline">
+    <h2>display: inline;</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p>👉 Boxes appear in one line, width cannot be changed.</p>
+  </div>
+
+  <div class="section inline-block">
+    <h2>display: inline-block;</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p>👉 Side-by-side like inline, but you can set width/height.</p>
+  </div>
+
+  <div class="section flex">
+    <h2>display: flex;</h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p>👉 Flex automatically adjusts spacing and alignment.</p>
+  </div>
+
+  <div class="section none">
+    <h2>display: none;</h2>
+    <div class="box">Box 1 (hidden)</div>
+    <p>👉 The hidden box doesn’t appear or take space.</p>
+  </div>
+
+</body>
+</html>

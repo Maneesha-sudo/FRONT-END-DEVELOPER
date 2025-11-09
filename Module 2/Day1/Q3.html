@@ -1,0 +1,97 @@
+<html>
+ <head>
+    <title>Masai Course Box</title>
+     <style>
+        *{
+        box-sizing: border-box;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        text-align: justify;
+        }
+         .Box{
+            width: 300px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: left;
+         }
+         #Learnmore{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 40%;
+         }
+         #Brochure{
+            background-color: white;
+            color: red;
+            padding: 10px;
+            border-radius: 40%;
+         }
+         #Learnmore:hover {
+            background-color: red;
+         }
+
+         #Brochure:hover {
+         background-color: red;
+        }
+
+        
+         .container {
+            display: flex;
+            justify-content: center;
+             align-items: flex-start; 
+            gap: 20px;                 
+            flex-wrap: wrap;           
+            }
+            img {
+            width: 15%;
+            height: 30px;
+            
+            border-radius: 2px;
+            margin:4px;
+            padding: 4px;
+            }
+            .Box:hover{
+               background-color: red;
+               color: white;
+            }
+         
+     </style>
+ </head>
+
+<body>
+<div class="container">
+<div class="Box">
+    <img src="https://www.iimsirmaur.ac.in/sites/default/files/inline-images/220px-Indian_Institute_of_Management_Sirmaur_Logo.png" alt="Box1-image">
+    <p>IIM Sirmaur</p>
+    <p><b>EDGE:Essentials of Data Analytics, Gen AI & Execution</b></p>
+    <p>06 months <span style="color: red;">|</span> Online</p>
+    <p>Qualifier test- <b>12th Nov 2025</b></p>
+    <button id="Learnmore">Learn more &rarr;</button>
+    <button id="Brochure">Brochure &rarr;</button>
+</div>
+
+<div class="Box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS_IVg28Gfi-RZg2BrRjpCnpoUVAje9NYuSQ&s" alt="Box2-image">
+    <p>Vishlesam i-Hub IIT Patna</p>
+    <p><b>Product Management and Agentic AI</b></p>
+    <p>06 months <span style="color: red;">|</span> Online</p>
+    <p>Qualifier test- <b>12th Nov 2025</b></p>
+    <button id="Learnmore">Learn more &rarr;</button>
+    <button id="Brochure">Brochure &rarr;</button>
+</div>
+
+<div class="Box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS_IVg28Gfi-RZg2BrRjpCnpoUVAje9NYuSQ&s" alt="Box3-image">
+    <p>Vishlesam i-Hub IIT Patna</p>
+    <p><b>Certification Program in Data Analytics with Gen & Agentic AI</b></p>
+    <p>06 months <span style="color: red;">|</span> Online</p>
+    <p>Qualifier test- <b>9th Nov 2025</b></p>
+    <button id="Learnmore">Learn more &rarr;</button>
+    <button id="Brochure">Brochure &rarr;</button>
+</div>
+</div>
+
+
+</body>
+</html>
