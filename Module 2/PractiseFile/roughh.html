@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Table</title>
+  <style>
+    .table {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 2px solid black;
+      width: 300px;
+      text-align: center;
+    }
+
+    .cell {
+      border: 1px solid gray;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .header {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="table">
+    <div class="cell header">Name</div>
+    <div class="cell header">Age</div>
+    <div class="cell header">City</div>
+
+    <div class="cell">Maneesha</div>
+    <div class="cell">21</div>
+    <div class="cell">Hyderabad</div>
+
+    <div class="cell">John</div>
+    <div class="cell">25</div>
+    <div class="cell">Delhi</div>
+
+    <div class="cell">Sara</div>
+    <div class="cell">23</div>
+    <div class="cell">Mumbai</div>
+  </div>
+</body>
+</html>

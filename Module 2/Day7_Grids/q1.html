@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container div{
+         color: white;
+         font-size: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 20px;
+         height: 150px;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: repeat(3,2fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+
+        }
+        .container >:nth-child(8){
+            order:5
+        }
+        .container >:nth-child(9){
+            order:8
+        }
+        .container >:nth-child(7){
+            order:9
+        }
+        .container >:nth-child(5){
+            order:7
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: orangered;">1.</div>
+        <div style="background-color: blueviolet;">2.</div>
+        <div style="background-color: brown;">3.</div>
+        <div style="background-color: skyblue;">4.</div>
+        <div style="background-color: green;">7.</div>
+        <div style="background-color: yellow;">6.</div>
+        <div style="background-color: blue;">9.</div>
+        <div style="background-color: orchid;">5.</div>
+        <div style="background-color: crimson;">8.</div>
+    </div>
+</body>
+</html>
