@@ -27,8 +27,8 @@
             background-color: red;
             color: white;
             font-weight: bold;
-            font-size: 14px;
-            padding: 8px;
+            font-size: 16px;
+            padding: 12px;
             border: 1px solid white;
             
         }
@@ -105,32 +105,31 @@
       .bottom{
         
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        margin: auto;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 40px;
         background-color: rgb(209, 208, 207);
-      }
-      .bottom img:nth-of-type(1){
-        width: 600px;
-        height: 440px;
-        padding: 10px;
-      }
-      
-      .bottom img:nth-of-type(2){
-        width: 150px;
-        height: 80px;
-        padding: 10px;
-      }
-      .bottom img:nth-of-type(3){
-        width: 150px;
-        height: 80px;
-        padding: 10px;
       }
       .pics{
         display: flex;
-            align-items: center;
-            gap: 20px;
+        flex-direction: column;
       }
+      .pics img{
+        width: 650px;
+        height: 450px;
+      }
+      .stores img:nth-of-type(1){
+        width: 200px;
+        height: 100px;
+        padding: 15px;
+      }
+      .stores img:nth-of-type(2){
+        width: 200px;
+        height: 100px;
+        padding: 15px;
+      }
+      
+      
       
 
     </style>
@@ -255,15 +254,18 @@
 
     <!-- BOTTOM -->
      <div class="bottom">
-          <div class="pics">
+               <div class="pics">
                 <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt="mobimage">
                  
-                
+               </div>
+        <div class="content">
                     <h1>Unlock Exclusive Offers</h1>
                     <p>For lightning fast ordering experience download the Domino's app</p>
+               <div class="stores">
                 <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="unlock excustive">
                  <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="playstoreimg">
-                   </div>
+               </div>  
+         </div> 
        
      </div>
     
