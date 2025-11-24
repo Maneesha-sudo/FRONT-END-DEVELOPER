@@ -37,7 +37,7 @@ let [first,...rest]=numbers;
 const {name,address:{city,pin}, geo:{lat, lng}}=user;
 console.log(city)
 console.log(lat)
-console.log(lng
+console.log(lng)
 
 //------------------Q6----------
 const multiply=(a,b)=>a*b
