@@ -1,81 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Login Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #4a90e2;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background: #357ABD;
-    }
-    #msg {
-      margin-top: 15px;
-      text-align: center;
-      color: red;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>Login</h2>
-    <input type="text" id="user" placeholder="Enter username" />
-    <input type="password" id="pass" placeholder="Enter password" />
-    <button onclick="login()">Login</button>
-    <p id="msg"></p>
-  </div>
 
+<html>
+  <head>
+    <body>
+
+    </body>
+  </head>
   <script>
-    function login() {
-      const user = document.getElementById("user").value;
-      const pass = document.getElementById("pass").value;
-      const msg = document.getElementById("msg");
+  const timer=Number(prompt("Enter number for countdown:"))
+  const timey=setInterval(()=>{console.log(timer);timer--;
+   if(timer<0){
+    console.log("countdown completed");
+   }
 
-      if (user === "maneesha" && pass === "12345") {
-        msg.style.color = "green";
-        msg.textContent = "Login Successful!";
-      } else {
-        msg.style.color = "red";
-        msg.textContent = "Invalid username or password";
-      }
-    }
+  }, 1000);
+
+
+  setTimeout(()=>{
+  const secprompt=prompt("press s to stop the countdown")
+  if(secprompt==="s")
+  {
+    clearInterval(timer)
+    console.log("countdown stopped by user")
+  }
+  })
   </script>
-</body>
 </html>

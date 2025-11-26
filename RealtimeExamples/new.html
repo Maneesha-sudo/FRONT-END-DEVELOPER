@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>document</title>
+  </head>
+  <body>
+    
+      <ul id="fruits">
+        <li id="b">banana</li>
+        <li id="a">apple</li>
+        <li id="m">mango</li>
+      </ul>
+      
+      <ul id="vegetables">
+        <li>potato</li>
+        <li>tomato</li>
+        <li>chilli</li>
+      </ul>
+      
+      <ul id="deserts">
+        <li>cake</li>
+        <li>brownies</li>
+        <li>ice cream</li>
+      </ul>
+  </body>
+  <script>
+    // const fruity=document.getElementById("fruits").children
+    // for(let li of fruity){
+    //     li.style.color="Red";
+    // }
+    // const vegies=document.getElementById("vegetables")
+    // const firstEle=vegies.firstElementChild;
+    // firstEle.style.color="Blue";
+    // const firstEle=vegies.lastElementChild;
+
+
+
+    // const ele=document.querySelectorAll("ul")
+    // ele.forEach(item=>{
+    //     const f=item.firstElementChild;
+    //     f.style.color="Pink";
+    //     const l=item.lastElementChild;
+    //     l.style.color="Grey"
+
+    // })
+
+    const fruity=document.getElementById("a")
+    let childs=fruity.parentElement;
+    childs.style.color="grey"
+    
+
+
+
+  </script>
+</html>
