@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .box{
+   
+    background-color: aqua;
+    text-align: center;
+   }
+   #btn:hover{
+    color: white;
+    background-color: green;
+   }
+   #btn{
+    background-color: burlywood;
+    color: black;
+   }
+    </style>
+</head>
+
+<body>
+    <form class="box">
+    <h2>Login page</h2>
+
+    <label>Username</label>
+    <input type="text" id="username" placeholder="enter your username"><br><br>
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="enter valid password"><br><br>
+
+    <button id="btn">Submit</button>
+
+    <p id="message"></p>
+    </form>
+
+<script>
+    const user = document.getElementById("username");
+    const pass = document.getElementById("password");
+    const btn  = document.getElementById("btn");
+    const msg  = document.getElementById("message");
+
+    btn.addEventListener("click", () => {
+
+        // EMPTY FIELD CHECK
+        if (user.value === "" || pass.value === "") {
+            msg.style.color = "red";
+            msg.textContent = "Fields cannot be empty!";
+            return;  // stop here
+        }
+
+        // LOGIN CHECK
+        if (user.value === "admin" && pass.value === "12345") {
+            msg.style.color = "green";
+            msg.textContent = "Login successful!";
+        } 
+        else {
+            msg.style.color = "red";
+            msg.textContent = "Invalid username or password!";
+        }
+    });
+    window.location.assign(dashboard.html);
+</script>
+
+</body>
+</html>

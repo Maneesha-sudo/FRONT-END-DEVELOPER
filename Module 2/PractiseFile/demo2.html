@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formy">
+
+
+    <h2>sign-in/sign-up page</h2>
+    <label for="Name">Name</label>
+    <input type="text" placeholder="Enter the name" id="Name"><br>
+    <label for="Email">Email</label>
+    <input type="email" placeholder="enter email address" id="Email"><br>
+    <label for="Password">Password</label>
+    <input type="password" placeholder="enter valid password" id=" Password">
+    <button id="Login">Login</button>
+    <p id="message"></p>
+
+    </form>
+</body>
+<script>
+    const namy= document.getElementById("Name");
+    const emaily =document.getElementById("Email");
+    const pass= document.getElementById("Password");
+    const btn= document.getElementById("Login")
+    const msg= document.getElementById("message")
+   const form= document.getElementById("formy")
+     form.addEventListener("submit", function(){
+        if(emaily.value="@"){
+            console.log("email has @")
+        }
+        else{
+
+        }
+     })
+
+</script>
+</html>
