@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for="colory">Enter a color</label>
+<input type="text" id="colory" placeholder="red,blue,green etc..."><br><br>
+
+<input type="text" id="texty" placeholder="Enter new text"><br><br>
+
+<button onclick="bgbtn()">Change Background</button><br><br>
+
+<button onclick="textbtn()">Update Text</button><br><br>
+
+<div id="divyy" style="padding:20px; border:1px solid black;">Hello World</div>
+
+</body>
+<script>
+let coloryy = document.getElementById("colory");  
+let colortype = document.getElementById("texty");
+let divy = document.getElementById("divyy");
+
+function bgbtn() {
+    let color = coloryy.value.trim();  
+
+    let test = document.createElement("span");
+    test.style.backgroundColor = color;
+
+    if (test.style.backgroundColor === "") {
+        alert("Invalid color name!");
+    } else {
+        divy.style.backgroundColor = color;
+    }
+}
+
+function textbtn() {
+    let textValue = colortype.value.trim(); 
+
+    if (textValue === "") {
+        alert("Please enter some text!");
+    } else {
+        divy.textContent = textValue; 
+    }
+}
+</script>
+</html>

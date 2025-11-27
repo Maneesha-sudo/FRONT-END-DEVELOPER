@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">DOM </h1>
+<p>para1</p>
+<p>para2</p>
+<p>para3</p>
+<p>para4</p>
+<div class="container"></div>
+</body>
+<script>
+let head= document.getElementById("header");
+head.textContent= "Welcome to the DOM World!";
+
+let para=document.getElementsByTagName("p");
+for(let p of para){
+p.style.color="Blue";
+}
+
+let divy=document.querySelector(".container");
+divy.style.height= "100px";
+divy.style.width= "100px";
+divy.style.backgroundColor="Yellow";
+
+
+</script>
+</html>

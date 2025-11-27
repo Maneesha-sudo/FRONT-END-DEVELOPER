@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="listitems">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+    </ul>
+    <button onclick="btn()">Add Item</button>
+</body>
+<script>
+  function btn(){
+    const listy=document.querySelector("#listitems");
+    const items=document.createElement("li");
+    items.textContent="New Item";
+    //listy.appendChild(items);
+
+    const licount= listy.getElementsByTagName("li").length;
+    if(licount%2===0){
+
+    items.style.fontWeight="bold";
+    items.style.color="Blue";
+  }
+  else{
+    items.style.fontStyle="italic";
+    items.style.color="Red";
+  }
+     listy.appendChild(items);
+
+}
+  
+</script>
+</html>

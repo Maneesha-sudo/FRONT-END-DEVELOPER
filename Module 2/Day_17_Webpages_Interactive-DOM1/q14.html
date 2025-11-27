@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugged Code</title>
+</head>
+
+<body>
+
+    <p id="message">Original Message</p>
+    <button id="pbtn">Change Text</button>
+    <br><br><hr>
+    <div id="box" style="width: 100px; height: 100px; background-color: lightgray;"></div><br><br>
+    <button id="divbtn">Change Background</button>
+
+    <script>
+        // Fixed incorrect selector (#massage → #message)
+        const para = document.getElementById("message");
+
+        // Fixed missing IDs and incorrect selection method (getElementByName → getElementById)
+        const btn1 = document.getElementById("pbtn");
+        const btn2 = document.getElementById("divbtn");
+
+        // Corrected wrong event method (addClickEventListener → addEventListener)
+        // Corrected wrong property (contentText → textContent)
+        btn1.addEventListener("click", () => {
+            para.textContent = "New Message";
+        });
+
+        // Corrected typo in style property (styl → style)
+        const boxy = document.getElementById("box");
+        btn2.addEventListener("click", () => {
+            boxy.style.backgroundColor = "blue";
+        });
+    </script>
+
+</body>
+</html>
