@@ -1,0 +1,39 @@
+
+<body>
+<button id="btn">show/hide</button>
+<p id="para" style="display: none;">This paragraph</p>
+
+<form id="myform">
+<label for="name">name:</label>
+<input type="text" placeholder="enter name" id="name" name="name">
+<button type="submit">Submit</button>
+</form>
+
+</body>
+
+<script>
+const btny=document.getElementById("btn");
+const pary=document.getElementById("para");
+
+btny.addEventListener("click",()=>{
+    if(pary.style.display==="none")
+{
+    pary.style.display="block";
+}
+else{
+    pary.style.direction="none";
+}
+})
+
+const form=document.getElementById("myform");
+const nameinput= document.getElementById("name")
+
+form.addEventListener("submit",(event)=>{
+    if(nameinput.value===""){
+    event.preventDefault();
+    alert("please enter  name"); }
+    else{
+        alert("submitted")
+    }
+})
+</script>

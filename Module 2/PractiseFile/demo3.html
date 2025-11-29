@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="backbtn()">back to home page</button>
+    <h1 id="heading">heading1</h1>
+    <p class="para">para1</p>
+    <p class="para">para2</p>
+    <p class="para">para3</p>
+    <p class="para">para4</p>
+    <div>hello world</div>
+     <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+    <!-- <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="imagy"> -->
+   <button id="btn">Login</button><br><hr>
+
+   <form>
+    <input type="text" id="username" placeholder="enter name">
+<button type="submit">submit</button>
+   </form>
+</body>
+
+<script>
+    function backbtn(){
+        window.location.href="demo2.html"
+    }
+    const head = document.getElementById("heading");
+    //head.textContent= "multiple headings";
+    head.innerText= "multiple headings";
+
+    //const pary= document.querySelector(".para");
+    //pary.innerText= "paragraph1";
+
+    const party= document.querySelectorAll(".para");
+    for(let i=0;i<party.length;i++){
+        party[i].style.backgroundColor= "Red";
+    }
+    const listitems= document.querySelectorAll("li");
+    listitems.forEach((item, index)=>{
+        item.textContent=`Updated item ${index}`;
+    });
+document.querySelector("div").innerHTML =
+    "<p>This is new <b>para</b> added</p>";
+
+    // const imagy= document.querySelector("img");
+    // imagy.src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s";
+   
+    const clickbtn= document.getElementById("btn");
+    // clickbtn.addEventListener("dblclick",()=>{
+    //     alert("button was clicked");
+    // })
+    clickbtn.addEventListener("mouseover", ()=>{
+        clickbtn.style.backgroundColor="Blue";
+    });
+    clickbtn.addEventListener("mouseout", ()=>{
+        clickbtn.style.backgroundColor="Pink";
+    })
+ const form = document.querySelector("form");
+    form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("form submitted");
+});
+
+
+</script>
+</html>

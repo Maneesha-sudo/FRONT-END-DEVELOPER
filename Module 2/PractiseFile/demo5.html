@@ -1,0 +1,30 @@
+
+<body>
+<button id="btn">login</button>
+</body>
+<script>
+ const but=document.getElementById("btn");
+// but.addEventListener("click", ()=>{
+//     alert("submitted")
+// })
+
+// but.addEventListener("click", ()=>{
+// const result = confirm("Do you agree?");
+// if (result) {
+//   console.log("User agreed!");
+// } else {
+//   console.log("User disagreed!");
+// }
+// })
+
+but.addEventListener("click", ()=>{
+
+const name = prompt("What is your name?");
+if (name) {
+  console.log(`Hello, ${name}!`);
+} else {
+  console.log("No name provided.");
+}
+});
+
+</script>

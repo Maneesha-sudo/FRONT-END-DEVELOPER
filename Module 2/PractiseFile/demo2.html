@@ -1,41 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <form id="formy">
+    <h2>TO-DO LIST</h2>
 
+```
+<!-- Enter task -->
+<input type="text" id="taskInput" placeholder="Enter a task">
 
-    <h2>sign-in/sign-up page</h2>
-    <label for="Name">Name</label>
-    <input type="text" placeholder="Enter the name" id="Name"><br>
-    <label for="Email">Email</label>
-    <input type="email" placeholder="enter email address" id="Email"><br>
-    <label for="Password">Password</label>
-    <input type="password" placeholder="enter valid password" id=" Password">
-    <button id="Login">Login</button>
-    <p id="message"></p>
+<!-- Dropdown to select priority -->
+<select id="dropdownlist">
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+</select>
 
-    </form>
+<!-- Buttons -->
+<button id="AddTask">Add Task</button>
+<button id="Editing">Edit</button>
+<button id="Deleting">Delete</button>
+<hr>
+
+<!-- Filter by priority -->
+<label for="filterSelect">Filter by Priority:</label>
+<select id="filterSelect">
+    <option value="All">All</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+</select>
+
+<!-- Sort tasks -->
+<label for="Sorting">Sort:</label>
+<select id="Sorting">
+    <option value="AtoZ">A => Z</option>
+    <option value="ZtoA">Z => A</option>
+</select>
+
+<!-- Task list -->
+<ul id="taskList">
+    <!-- Tasks will appear here dynamically -->
+</ul>
+
+<script src="demo2.js"></script>
+
 </body>
-<script>
-    const namy= document.getElementById("Name");
-    const emaily =document.getElementById("Email");
-    const pass= document.getElementById("Password");
-    const btn= document.getElementById("Login")
-    const msg= document.getElementById("message")
-   const form= document.getElementById("formy")
-     form.addEventListener("submit", function(){
-        if(emaily.value="@"){
-            console.log("email has @")
-        }
-        else{
-
-        }
-     })
-
-</script>
-</html>

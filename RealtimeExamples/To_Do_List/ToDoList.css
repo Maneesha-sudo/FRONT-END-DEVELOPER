@@ -1,0 +1,155 @@
+:root {
+  --bg: #f1f3f5;
+  --container-bg: #fff;
+  --text-color: #000;
+  --input-bg: #fff;
+}
+
+body.dark {
+  --bg: #121212;
+  --container-bg: #1e1e1e;
+  --text-color: #f1f1f1;
+  --input-bg: #2a2a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--container-bg);
+  width: 500px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(79, 49, 4);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#themeBtn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+  flex: 1;
+}
+#addBtn{
+  padding: 15px 20px; 
+  border: none;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#themeBtn{
+  padding: 10px 15px; 
+  border: none;
+  background: #343333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* button {
+    margin-right: 30px;
+  padding: 15px;
+  border: none;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+button:hover {
+  opacity: 0.9;
+}
+
+ul {
+  list-style: none;
+  min-height: 50px;
+}
+
+li {
+  background: var(--input-bg);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s ease;
+  cursor: grab;
+}
+
+li.completed .text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.actions button {
+  margin-left: 5px;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background: #f59f00;
+  color: white;
+}
+
+.delete-btn {
+  background: #f03e3e;
+  color: white;
+}
+
+.priority {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.priority.High { color: red; }
+.priority.Medium { color: orange; }
+.priority.Low { color: green; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
