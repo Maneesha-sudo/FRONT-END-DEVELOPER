@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            margin: auto;
+   
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+    <button id="paraAdd">Add Paragraph</button>
+    <button id="ParaRemove">Remove Last Paragraph</button>
+    <div id="listy"></div>
+    </div>
+</body>
+<script>
+    //captured all the buttons and new div
+    const paraAdd = document.getElementById("paraAdd");
+    const ParaRemove = document.getElementById("ParaRemove");
+    const listy = document.getElementById("listy");
+
+    //when clicked on Add event, then added new paras
+    paraAdd.addEventListener("click", () => {
+        const newPara = document.createElement("div");
+        newPara.textContent = "This is new Paragraph";
+        listy.appendChild(newPara); //added newpara to the div list
+    });
+    //when clicked on remove btn, removes last child from the div(listy)
+    ParaRemove.addEventListener("click", () => {
+        const last = listy.lastElementChild;
+        if (last) {
+            listy.removeChild(last);
+        }
+    });
+</script>
+
+</html>
