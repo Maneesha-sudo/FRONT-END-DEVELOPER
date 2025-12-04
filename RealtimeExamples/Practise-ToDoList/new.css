@@ -1,0 +1,38 @@
+#container {
+    margin: auto;
+    width: 60%;
+    min-height: 100%; /* fills page height */
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column; /* stack elements vertically */
+    align-items: center; /* horizontal center */
+    justify-content: center; /* vertical center */
+    padding: 20px;
+    box-sizing: border-box;
+}
+   #header{
+    color: crimson;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+   }
+#Entertask, button {
+    border: 2px solid rgb(3,3,4);
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+#Entertask:hover,
+button:hover {
+    background-color: aqua;
+}
+#buttons {
+    display: flex;
+    gap: 10px; /* space between buttons */
+    justify-content: center; /* center horizontally */
+    margin-top: 10px;
+}
+
+button:hover{
+background-color: aqua;
+}
