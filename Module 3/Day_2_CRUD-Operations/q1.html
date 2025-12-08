@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Book App</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .book { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+    input { padding: 6px; margin: 4px 0; width: 250px; }
+    button { padding: 6px 10px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <h2>Simple Firebase Book Manager</h2>
+
+  <!-- Add Book Form -->
+  <h3>Add Book</h3>
+  <input id="title" placeholder="Title" /><br>
+  <input id="author" placeholder="Author" /><br>
+  <input id="price" placeholder="Price" /><br>
+  <input id="image" placeholder="Image URL" /><br>
+  <button onclick="addBook()">Add Book</button>
+
+  <h3>All Books</h3>
+  <div id="books"></div>
+
+  <script type="module">
+    // ------- Firebase Config (paste yours) -------
+    const firebaseConfig = {
+  apiKey: "YOUR_API_KEY_HERE",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  databaseURL: "https://book-management-app-da41e-default-rtdb.asia-southeast1.firebasedatabase.app"
+};
+
+    // Firebase imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const booksRef = collection(db, "books");
+
+    // -------- Add Book --------
+    async function addBook() {
+      const title = document.getElementById("title").value;
+      const author = document.getElementById("author").value;
+      const price = document.getElementById("price").value;
+      const image = document.getElementById("image").value;
+
+      await addDoc(booksRef, { title, author, price, image });
+      document.getElementById("title").value = "";
+      document.getElementById("author").value = "";
+      document.getElementById("price").value = "";
+      document.getElementById("image").value = "";
+    }
+
+    window.addBook = addBook;
+
+    // -------- Delete Book --------
+    async function deleteBook(id) {
+      await deleteDoc(doc(db, "books", id));
+    }
+    window.deleteBook = deleteBook;
+
+    // -------- Update Author --------
+    async function updateAuthor(id, oldName) {
+      const newName = prompt("New author name", oldName);
+      if (!newName) return;
+      await updateDoc(doc(db, "books", id), { author: newName });
+    }
+    window.updateAuthor = updateAuthor;
+
+    // -------- Get Books (Realtime) --------
+    const booksDiv = document.getElementById("books");
+
+    onSnapshot(booksRef, (snapshot) => {
+      booksDiv.innerHTML = "";
+      snapshot.forEach(docSnap => {
+        const data = docSnap.data();
+        const id = docSnap.id;
+
+        booksDiv.innerHTML += `
+          <div class="book">
+            <strong>${data.title}</strong> <br>
+            Author: ${data.author} <br>
+            Price: ₹${data.price} <br>
+            <img src="${data.image}" width="80" /> <br><br>
+            <button onclick="updateAuthor('${id}', '${data.author}')">Update Author</button>
+            <button onclick="deleteBook('${id}')">Delete</button>
+          </div>
+        `;
+      });
+    });
+  </script>
+</body>
+</html>
