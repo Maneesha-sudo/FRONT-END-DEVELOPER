@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const TodoDetails = () => {
-  const { todoId } = useParams(); // get dynamic id from URL
+  const { todoId } = useParams(); 
   const [todo, setTodo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
