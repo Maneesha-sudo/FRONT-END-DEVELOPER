@@ -1,0 +1,260 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f0f4f8;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.dark {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+}
+
+/* Main container with pastel gradient */
+.container {
+  
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+  /* pastel gradient */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc; /* thick border */
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.dark .container {
+  background: linear-gradient(135deg, #3a3a4f, #2a2a3c);
+}
+
+/* Fancy heading with gradient text */
+h1 {
+ 
+  color: #ff758c;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #de3954, #ce5587, #ff9ed8);
+
+  /* -webkit-background-clip: text; */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+/* Gradient animation for heading */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dark mode heading */
+.app.dark h1 {
+  background: linear-gradient(90deg, #ff9ed8, #ff7eb3, #ff758c);
+background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark mode toggle button */
+.dark-toggle {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #444242;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.dark-toggle:hover {
+  background-color: #005fcc;
+  transform: scale(1.1);
+}
+
+/* Input section */
+.input-section {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.app.dark .input-section input {
+  background: #444;
+  color: #f0f0f0;
+  border: 1px solid #666;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.input-section button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.filter-buttons button {
+  margin: 0 5px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #0077ff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.app.dark .filter-buttons button:hover {
+  background-color: #76808b;
+  transform: scale(1.1);
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Task item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  transition: background 0.3s;
+}
+
+.app.dark .task-item {
+  background-color: #3a3a4f;
+  border-bottom: 1px solid #555;
+}
+
+/* Task text (line-through for completed) */
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Action buttons */
+.actions button {
+  margin-left: 6px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.actions button:nth-child(1) {
+  background-color: #ffc107;
+  /* Edit */
+  color: #333;
+}
+
+.actions button:nth-child(1):hover {
+  background-color: #e0a800;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.actions button:nth-child(2) {
+  background-color: #dc3545;
+  /* Delete */
+  color: #fff;
+}
+
+.actions button:nth-child(2):hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.actions button:nth-child(3) {
+  background-color: #28a745;
+  /* Completed */
+  color: #fff;
+}
+
+.actions button:nth-child(3):hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .input-section input {
+    font-size: 14px;
+  }
+
+  .input-section button {
+    padding: 8px 12px;
+  }
+
+  .actions button {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
