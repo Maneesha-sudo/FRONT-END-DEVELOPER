@@ -1,0 +1,1 @@
+export const url= https://mynewapp-59685-default-rtdb.asia-southeast1.firebasedatabase.app/;
