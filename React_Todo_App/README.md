@@ -1,16 +1,58 @@
-# React + Vite
+# ✅ React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and fully functional **Todo Application** built using **React**, featuring **Dark & Light Mode** and real-world task management capabilities.
 
-Currently, two official plugins are available:
+This project is part of my **Frontend / AI Web Developer portfolio** and demonstrates concepts frequently evaluated in **technical interviews**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Why This Project?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Todo applications are commonly used by recruiters to assess:
+- State management and data flow
+- Component structuring
+- UI/UX thinking
+- Real-world feature implementation
 
-## Expanding the ESLint configuration
+This project is designed with those expectations in mind.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- ➕ Add new tasks
+- ✏️ Edit existing tasks
+- ❌ Delete tasks
+- ✅ Mark tasks as completed
+- 🔍 Filter tasks (All / Active / Completed)
+- 🌗 Dark / Light mode toggle
+- 📱 Responsive and clean UI
+
+---
+
+## 🧠 Key Concepts Demonstrated
+
+- React Functional Components
+- `useState` for state management
+- Controlled form inputs
+- Conditional rendering
+- Array methods (`map`, `filter`)
+- Theme switching (Dark / Light mode)
+- Reusable and maintainable components
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **JavaScript (ES6+)**
+- **HTML5**
+- **CSS3**
+
+---
+
+## 📂 Project Setup
+
+```bash
+npm install
+npm start
