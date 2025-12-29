@@ -1,12 +1,11 @@
 import React from 'react';
-import ThemeProvider from "./themeProvider";
-import Child1 from './Child1';
+import Todo from './Todo';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Child1 />
-    </ThemeProvider>
+    <>
+      <Todo />
+    </>
   );
 };
 
