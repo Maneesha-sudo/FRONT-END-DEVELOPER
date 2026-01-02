@@ -20,9 +20,7 @@ const ProgressBar = ({ step }) => {
           <span
             key={index}
             className={`text-lg font-bold transition-colors duration-300 ${
-              step - 1 >= index
-                ? "text-purple-700"
-                : "text-gray-400"
+              step - 1 >= index ? "text-purple-700" : "text-gray-400"
             }`}
           >
             {label}

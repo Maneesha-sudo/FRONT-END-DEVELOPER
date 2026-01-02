@@ -1,7 +1,7 @@
 import React from "react";
 
-const AccountDetails = ({ state, dispatch, nextStep, prevStep }) => {
-  const { password, confirmPassword } = state;
+const AccountDetails = ({ formData, handleChange, nextStep, prevStep }) => {
+  const { password, confirmPassword } = formData;
 
   const handleNext = () => {
     if (!password || !confirmPassword) {
@@ -23,18 +23,14 @@ const AccountDetails = ({ state, dispatch, nextStep, prevStep }) => {
         type="password"
         placeholder="Password"
         value={password}
-        onChange={(e) =>
-          dispatch({ type: "SET_FIELD", field: "password", value: e.target.value })
-        }
+        onChange={(e) => handleChange("password", e.target.value)}
         className="border border-teal-300 p-2 mb-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
       />
       <input
         type="password"
         placeholder="Confirm Password"
         value={confirmPassword}
-        onChange={(e) =>
-          dispatch({ type: "SET_FIELD", field: "confirmPassword", value: e.target.value })
-        }
+        onChange={(e) => handleChange("confirmPassword", e.target.value)}
         className="border border-teal-300 p-2 mb-1 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
       />
       {password && confirmPassword && password !== confirmPassword && (

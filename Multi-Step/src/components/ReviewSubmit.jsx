@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const ReviewSubmit = ({ state, prevStep, reset }) => {
+const ReviewSubmit = ({ formData, prevStep, reset }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -10,9 +10,8 @@ const ReviewSubmit = ({ state, prevStep, reset }) => {
     setError("");
 
     try {
-      // Example: sending data to a fake API
-      const response = await axios.post("https://jsonplaceholder.typicode.com/posts", state);
-      
+      const response = await axios.post("https://jsonplaceholder.typicode.com/posts", formData);
+
       if (response.status === 201) {
         alert("Form submitted successfully!");
         reset();
@@ -32,9 +31,9 @@ const ReviewSubmit = ({ state, prevStep, reset }) => {
       </h2>
 
       <div className="mb-4 space-y-2 text-gray-700">
-        <p><strong>First Name:</strong> {state.firstName}</p>
-        <p><strong>Last Name:</strong> {state.lastName}</p>
-        <p><strong>Email:</strong> {state.email}</p>
+        <p><strong>First Name:</strong> {formData.firstName}</p>
+        <p><strong>Last Name:</strong> {formData.lastName}</p>
+        <p><strong>Email:</strong> {formData.email}</p>
       </div>
 
       {error && <p className="text-red-500 mb-2">{error}</p>}
