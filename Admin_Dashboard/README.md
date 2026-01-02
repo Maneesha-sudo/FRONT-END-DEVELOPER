@@ -1,4 +1,4 @@
-**🧑‍💼 React Admin Dashboard**
+#🧑‍💼 React Admin Dashboard
 
 A responsive Admin Dashboard application built using React, featuring routing, API integration, theme management, and reusable UI components.
 
