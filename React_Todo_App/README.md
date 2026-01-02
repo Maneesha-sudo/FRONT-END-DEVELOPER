@@ -76,6 +76,8 @@ HTML5
 CSS3
 
 **📂 Getting Started**
+
 npm install
+
 npm start
 
