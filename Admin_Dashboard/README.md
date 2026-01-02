@@ -1,16 +1,89 @@
-# React + Vite
+**🧑‍💼 React Admin Dashboard**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Admin Dashboard application built using React, featuring routing, API integration, theme management, and reusable UI components.
 
-Currently, two official plugins are available:
+This project demonstrates real-world frontend concepts commonly discussed in React interviews.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**📌 Project Overview**
 
-## React Compiler
+The Admin Dashboard provides a structured layout with multiple pages such as Dashboard, Users, Reports, and Settings.
+It follows a component-based architecture and uses React hooks, Context API, and React Router for state and navigation management.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**🚀 Features**
 
-## Expanding the ESLint configuration
+📊 Dashboard with summary cards
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👥 Users page with API-driven data table
+
+🔍 Search functionality for users
+
+📄 Pagination for better data handling
+
+🌗 Dark / Light theme toggle using Context API
+
+💾 Theme persistence using localStorage
+
+🧭 Sidebar navigation with active route highlighting
+
+📱 Responsive layout using Tailwind CSS
+
+All features are implemented using real API data.
+
+**🧠 Key Concepts Demonstrated**
+
+React Functional Components
+
+useState and useEffect hooks
+
+Context API for global theme management
+
+React Router for multi-page navigation
+
+API integration using Axios
+
+Conditional rendering and dynamic styling
+
+Search and pagination logic
+
+Reusable and maintainable component structure
+
+**🧩 Application Structure**
+
+App – Routing and global layout
+
+Sidebar – Navigation menu
+
+Dashboard – Summary cards and user overview
+
+Users – API-driven user table with search and pagination
+
+Reports – Placeholder for analytics
+
+Settings – Theme toggle settings
+
+ThemeContext – Global theme state management
+
+**🛠️ Tech Stack
+**
+React
+
+React Router
+
+Context API
+
+Axios
+
+JavaScript (ES6+)
+
+Tailwind CSS
+
+**🌐 API Used
+**
+
+JSONPlaceholder
+Used to fetch sample user data for dashboard and users page.
+
+**📂 Getting Started**
+npm install
+npm start
+
