@@ -1,17 +1,17 @@
-**✅ React Todo Application**
+# ✅ React Todo Application
 
 A simple and functional Todo Application built using React, focused on demonstrating core frontend concepts such as state management, component architecture, and user interaction.
 
 This project is part of my Frontend Developer portfolio and is designed to reflect patterns commonly discussed in technical interviews.
 
-**📌 Project Overview**
+## 📌 Project Overview
 
 This Todo application allows users to manage daily tasks efficiently.
 It follows a component-based architecture and uses React hooks to handle state and side effects.
 
 The project emphasizes clean code, reusability, and real-world CRUD logic.
 
-**🚀 Features**
+##  🚀 Features
 
 ➕ Add new tasks
 
@@ -31,7 +31,7 @@ The project emphasizes clean code, reusability, and real-world CRUD logic.
 
 ✅ All features listed above are implemented in the code.
 
-**🧠 Key Concepts Demonstrated**
+## 🧠 Key Concepts Demonstrated
 
 React Functional Components
 
@@ -49,7 +49,7 @@ Lifting state up and prop-based communication
 
 Reusable and maintainable component structure
 
-**🧩 Component Structure**
+## 🧩 Component Structure
 
 App – Manages global state (tasks, filter, theme)
 
@@ -65,7 +65,7 @@ DarkModeToggle – Toggles dark and light theme
 
 This separation improves readability and scalability.
 
-**🛠️ Tech Stack**
+## 🛠️ Tech Stack
 
 React
 
@@ -75,7 +75,7 @@ HTML5
 
 CSS3
 
-**📂 Getting Started**
+## 📂 Getting Started
 
 npm install
 
