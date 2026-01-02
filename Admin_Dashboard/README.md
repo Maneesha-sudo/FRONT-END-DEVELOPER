@@ -2,8 +2,6 @@
 
 A responsive Admin Dashboard application built using React, featuring routing, API integration, theme management, and reusable UI components.
 
-This project demonstrates real-world frontend concepts commonly discussed in React interviews.
-
 **📌 Project Overview**
 
 The Admin Dashboard provides a structured layout with multiple pages such as Dashboard, Users, Reports, and Settings.
@@ -63,8 +61,8 @@ Settings – Theme toggle settings
 
 ThemeContext – Global theme state management
 
-**🛠️ Tech Stack
-**
+**🛠️ Tech Stack**
+
 React
 
 React Router
@@ -77,8 +75,8 @@ JavaScript (ES6+)
 
 Tailwind CSS
 
-**🌐 API Used
-**
+**🌐 API Used**
+
 
 JSONPlaceholder
 Used to fetch sample user data for dashboard and users page.
