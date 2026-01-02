@@ -1,149 +1,88 @@
-🛍️ ReactShop – Modern E-Commerce Shopping Cart
+# 🛒 React E-Commerce Cart Application
 
-ReactShop is a modern, responsive e-commerce frontend application inspired by platforms like Amazon and Myntra. It features a clean black & red UI, product grid layout, wishlist, filters, and a separate cart page — all built without useReducer, using React best practices.
+A modern E-commerce Shopping Cart application built using React and React Router, featuring product listing, cart management, wishlist functionality, and filtering options.
 
-🚀 Live Features
+This project demonstrates core frontend concepts such as state management, routing, and dynamic UI updates.
 
-🛒 Shopping Cart (Separate Page)
+## 🚀 Features
 
-❤️ Wishlist Functionality
+🛍️ Product listing with images, names, and prices
 
-🔍 Search Products
+➕ Add products to cart
 
-💰 Price Filter
+🔁 Increase quantity for existing cart items
 
-↕️ Sort by Price
+❌ Remove items from cart
 
-🧩 Product Grid (3 Columns, Equal Card Sizes)
+❤️ Wishlist toggle for products
 
-📱 Fully Responsive Design
+🔍 Search products by name
 
-🎨 Modern Black & Red Theme
+💲 Filter products by maximum price
 
-⚡ Fast Vite + React Setup
+↕️ Sort products by price (Low → High / High → Low)
 
-🖥️ Tech Stack
+🧭 Page navigation using React Router (Shop & Cart pages)
 
-Frontend: React.js (Hooks, useState)
+📱 Responsive product grid layout
 
-Styling: CSS3 (Grid + Flexbox)
+## 🧠 Key Concepts Demonstrated
 
-Routing: React Router DOM
+React Functional Components
 
-Build Tool: Vite
+useState for managing cart, wishlist, and filters
 
-Language: JavaScript (ES6+)
+Conditional rendering
 
-📁 Project Structure
+Array methods (map, filter, find, some)
+
+Cart quantity management logic
+
+Client-side routing using React Router
+
+Props drilling and component communication
+
+Responsive UI with CSS Grid
+
+## 🛠️ Tech Stack
+
+React
+
+JavaScript (ES6+)
+
+React Router DOM
+
+CSS3
+
+## 📂 Folder Structure (Simplified)
 src/
-│── components/
-│   ├── Navbar.jsx
-│   ├── ProductList.jsx
-│   ├── ProductCard.jsx
-│   ├── FilterBar.jsx
-│
-│── pages/
-│   ├── Home.jsx
-│   ├── Cart.jsx
-│   ├── Wishlist.jsx
-│
-│── data/
-│   └── products.js
-│
-│── App.jsx
-│── main.jsx
-│── index.css
+ ├─ components/
+ │   ├─ Navbar.jsx
+ │   ├─ ProductList.jsx
+ │   ├─ FilterBar.jsx
+ ├─ pages/
+ │   ├─ Home.jsx
+ │   └─ CartPage.jsx
+ ├─ App.jsx
+ └─ main.jsx
 
-🏠 Pages Overview
-Home Page
+## ⚙️ How It Works
 
-Hero section with brand tagline
+Product data is stored locally as an array
 
-Product grid (3 cards per row)
+Cart state stores products with quantity
 
-Search, filter, and sort options
+Wishlist tracks liked products
 
-Add to Cart & Wishlist buttons
+Filters update product display in real time
 
-Cart Page
+Routing switches between Shop and Cart pages
 
-Displays selected products
-
-Quantity control
-
-Remove items
-
-Total price calculation
-
-Wishlist Page
-
-Save products for later
-
-Move items to cart
-
-🎨 UI & Design Highlights
-
-CSS Grid for product layout
-
-Flexbox for equal card heights
-
-Fixed image height with object-fit: cover
-
-Buttons aligned using margin-top: auto
-
-Mobile-friendly breakpoints
-
-⚙️ Installation & Setup
-# Clone the repository
-git clone https://github.com/your-username/ReactShop.git
-
-# Navigate to project folder
-cd ReactShop
-
-# Install dependencies
+## ▶️ Project Setup
 npm install
-
-# Start development server
-npm run dev
+npm start
 
 
-App will run at:
+Open in browser:
 
-http://localhost:5173
-
-🧠 Key Learning Outcomes
-
-Managing complex UI state using useState
-
-Implementing cart & wishlist logic
-
-Responsive grid layouts using CSS Grid
-
-Component-based architecture
-
-Clean folder structure
-
-Real-world e-commerce UI patterns
-
-❓ Why No useReducer?
-
-This project intentionally avoids useReducer to demonstrate:
-
-Effective state management using useState
-
-Simpler logic for small–medium scale apps
-
-Clear understanding of when useReducer is truly needed
-
-
-👩‍💻 Author
-
-Maneesha Mateti
-Frontend Developer (React)
-
-GitHub: https://github.com/your-username
-
-LinkedIn: https://linkedin.com/in/your-profile
-
-
-
+http://localhost:3000
