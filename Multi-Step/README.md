@@ -84,10 +84,6 @@ npm install
 npm start
 
 
-### Open your browser:
-
-http://localhost:3000
-
 ## 🎨 Folder Structure (Simplified)
 src/
  ├─ components/
