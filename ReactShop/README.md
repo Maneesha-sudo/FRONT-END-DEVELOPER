@@ -79,10 +79,8 @@ Filters update product display in real time
 Routing switches between Shop and Cart pages
 
 ## ▶️ Project Setup
+
 npm install
+
 npm start
 
-
-Open in browser:
-
-http://localhost:3000
