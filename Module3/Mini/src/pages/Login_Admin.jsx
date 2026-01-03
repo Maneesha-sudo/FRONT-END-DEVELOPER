@@ -20,7 +20,7 @@ const user=loginUser(email, password)
     }
 
     return (
-        <div>
+        <div className='w-6/12 h-16 bg-amber-300'>
             <h2>Admin Login page </h2>
             <input type='email'
                 placeholder='Enter email'

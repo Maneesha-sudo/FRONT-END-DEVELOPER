@@ -17,8 +17,25 @@ function handlesubmit(){
 }
 
   return (
-    <div>AddRestaurant</div>
+    <div>
+        <input placeholder='Name' onChange={(e)=>setData({...data,restaurantName:e.target.value})}/>
+        <select onChange={e=>setData({...data, type:e.target.value})}>
+            <option>Rajasthani</option>
+            <option>Gujarathi</option>
+            <option>Mughlai</option>
+            <option>Jain</option>
+            <option>Thai</option>
+            <option>North Indian</option>
+            <option>South Indian</option>
+        </select>
+        <select onChange={e=>
+            setData({...data, parkingLot:e.target.value==="true"})
+        }>
+            <option value="true">Parking Available</option>
+        </select>
+        <button onClick={handlesubmit}>Add</button>
+    </div>
   )
 }
 
-export default AddRestaurant
+export default AddRestaurant;
