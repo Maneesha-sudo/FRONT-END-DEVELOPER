@@ -1,0 +1,72 @@
+-- ================================
+-- STEP 1: DROP TABLE (optional)
+-- ================================
+DROP TABLE IF EXISTS students;
+
+-- ================================
+-- STEP 2: CREATE TABLE
+-- ================================
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    age INTEGER,
+    course TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ================================
+-- STEP 3: INSERT DATA (6 RECORDS)
+-- ================================
+INSERT INTO students (name, email, age, course) VALUES
+('Alice Johnson', 'alice.johnson@example.com', 22, 'Computer Science'),
+('Bob Smith', 'bob.smith@example.com', 19, 'Mathematics'),
+('Charlie Lee', 'charlie.lee@example.com', 24, 'Physics'),
+('Diana Brown', 'diana.brown@example.com', 21, 'Computer Science'),
+('Ethan Davis', 'ethan.davis@example.com', 20, 'Chemistry'),
+('Fiona White', 'fiona.white@example.com', 23, 'Mathematics');
+
+-- ================================
+-- STEP 4: READ OPERATIONS
+-- ================================
+
+-- Fetch all students
+SELECT * FROM students;
+
+-- Fetch students older than 20
+SELECT * FROM students WHERE age > 20;
+
+-- Fetch only name and email
+SELECT name, email FROM students;
+
+-- Fetch students enrolled in Computer Science
+SELECT * FROM students WHERE course = 'Computer Science';
+
+-- ================================
+-- STEP 5: UPDATE OPERATIONS
+-- ================================
+
+-- Update age of one student
+UPDATE students
+SET age = 23
+WHERE name = 'Alice Johnson';
+
+-- Update course for all Mathematics students
+UPDATE students
+SET course = 'Statistics'
+WHERE course = 'Mathematics';
+
+-- ================================
+-- STEP 6: DELETE OPERATIONS
+-- ================================
+
+-- Delete one student by ID
+DELETE FROM students WHERE id = 2;
+
+-- Delete students below age 21
+DELETE FROM students WHERE age < 21;
+
+-- ================================
+-- FINAL CHECK
+-- ================================
+SELECT * FROM students;
