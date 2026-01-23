@@ -1,0 +1,125 @@
+
+-- ============================================
+-- STEP 1: CREATE TABLES WITH RELATIONSHIP
+-- ============================================
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    amount INTEGER,
+    status TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- ============================================
+-- STEP 2: INSERT DATA
+-- ============================================
+
+-- Insert 5 users
+INSERT INTO users (name, email) VALUES
+('Alice Johnson', 'alice@example.com'),
+('Bob Smith', 'bob@example.com'),
+('Charlie Lee', 'charlie@example.com'),
+('Diana Brown', 'diana@example.com'),
+('Ethan Davis', 'ethan@example.com');
+
+
+-- Insert 9 orders
+-- One user has multiple orders
+INSERT INTO orders (user_id, amount, status) VALUES
+(1, 500, 'Placed'),
+(1, 1200, 'Delivered'),
+(1, 800, 'Shipped'),
+(2, 300, 'Placed'),
+(2, 700, 'Cancelled'),
+(3, 1500, 'Delivered'),
+(4, 400, 'Placed'),
+(4, 900, 'Shipped'),
+(5, 600, 'Delivered');
+
+
+-- ============================================
+-- STEP 3: READ DATA (RELATIONAL READS)
+-- ============================================
+
+-- Fetch all users
+SELECT * FROM users;
+
+-- Fetch all orders
+SELECT * FROM orders;
+
+-- Fetch all orders for a specific user (user_id = 1)
+SELECT * FROM orders
+WHERE user_id = 1;
+
+-- Fetch users who have more than one order
+SELECT u.id, u.name, COUNT(o.id) AS total_orders
+FROM users u
+JOIN orders o ON u.id = o.user_id
+GROUP BY u.id, u.name
+HAVING COUNT(o.id) > 1;
+
+-- Fetch total order amount per user
+SELECT u.name, SUM(o.amount) AS total_amount
+FROM users u
+JOIN orders o ON u.id = o.user_id
+GROUP BY u.name;
+
+
+-- ============================================
+-- STEP 4: UPDATE DATA
+-- ============================================
+
+-- Update email of one user
+UPDATE users
+SET email = 'alice.new@example.com'
+WHERE id = 1;
+
+-- Update status of all orders for a specific user
+UPDATE orders
+SET status = 'Delivered'
+WHERE user_id = 2;
+
+-- Update order amount for a single order
+UPDATE orders
+SET amount = 2000
+WHERE id = 6;
+
+
+-- ============================================
+-- STEP 5: DELETE DATA
+-- ============================================
+
+-- Delete one order using order id
+DELETE FROM orders
+WHERE id = 9;
+
+-- Delete all orders of a specific user
+DELETE FROM orders
+WHERE user_id = 4;
+
+-- Attempt to delete a user with existing orders
+-- This will FAIL because orders depend on users
+DELETE FROM users
+WHERE id = 1;
+
+
+-- ============================================
+-- STEP 6: CONCEPTUAL QUESTION (ANSWER)
+-- ============================================
+
+-- Why should orders not be stored inside the users table?
+-- Orders should not be stored inside the users table because
+-- one user can have many orders.
+-- Storing orders in users would cause data duplication,
+-- poor scalability, and difficulty in managing multiple orders.
+-- Using a separate orders table keeps data normalized,
+-- clean, and easy to manage.
