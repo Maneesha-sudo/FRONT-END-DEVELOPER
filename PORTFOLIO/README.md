@@ -6,8 +6,9 @@ Welcome to my personal portfolio repository.
 I am a Frontend Developer specializing in building responsive, user-friendly web applications using React.js and modern JavaScript.
 
 ---
-## Demo live
+## 🚀 Live Demo
 
+👉 https://nextbuyapprepo.vercel.app/ (hosted on Vercel)
 ---
 
 ## 🚀 Tech Stack
@@ -50,7 +51,7 @@ With 2 years of experience working on large-scale applications like Amazon Flex 
 ## 📫 Connect With Me
 
 📧 matetimaneesha4@gmail.com  
-🔗 GitHub: https://github.com/Maneesha-sudo  
+🔗 GitHub: https://github.com/Maneesha-sudo/Portfolio
 🔗 LinkedIn: https://www.linkedin.com/in/mateti-maneesha/
 
 ---
