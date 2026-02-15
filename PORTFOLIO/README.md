@@ -1,16 +1,77 @@
-# React + Vite
+# 👩‍💻 Maneesha | Front-End Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio repository!  
+This project showcases my skills, projects, and experience as a Front-End Developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About Me
 
-## React Compiler
+Hi! I'm Maneesha, a passionate Front-End Developer who loves building responsive, user-friendly, and modern web applications.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I focus on:
+- Clean UI/UX
+- Responsive design
+- Performance optimization
+- Modern JavaScript frameworks
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React.js
+- Tailwind CSS
+- Vite
+- Git & GitHub
+
+---
+
+## 📂 Featured Projects
+
+### 🛍 E-commerce Website
+- Responsive online shopping UI
+- Product filtering & cart functionality
+- Built with React + Tailwind CSS
+
+### 🎨 Portfolio Website
+- Personal branding website
+- Smooth animations
+- Fully responsive layout
+
+### 🧠 Coding Practice Projects
+- JavaScript problem solving
+- DOM manipulation projects
+- Mini applications
+
+---
+
+## 🌐 Live Demo
+
+👉 (Add your deployed link here if hosted on Vercel/Netlify)
+
+---
+
+## 📸 Screenshots
+
+(Add project screenshots here)
+
+---
+
+## 📬 Contact Me
+
+- 📧 Email: your-email@example.com
+- 💼 LinkedIn: (Add your LinkedIn link)
+- 🖥 GitHub: https://github.com/Maneesha-sudo
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project, please consider giving it a ⭐ on GitHub!
+
+---
+
+### Thank you for visiting my portfolio! 🚀
