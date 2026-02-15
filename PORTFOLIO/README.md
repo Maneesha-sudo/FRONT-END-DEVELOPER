@@ -1,77 +1,58 @@
-# 👩‍💻 Maneesha | Front-End Developer
+# 👩‍💻 Maneesha Mateti
+### Frontend Developer | React.js
 
-Welcome to my personal portfolio repository!  
-This project showcases my skills, projects, and experience as a Front-End Developer.
+Welcome to my personal portfolio repository.
+
+I am a Frontend Developer specializing in building responsive, user-friendly web applications using React.js and modern JavaScript.
+
+---
+## Demo live
 
 ---
 
-## 🚀 About Me
+## 🚀 Tech Stack
 
-Hi! I'm Maneesha, a passionate Front-End Developer who loves building responsive, user-friendly, and modern web applications.
-
-I focus on:
-- Clean UI/UX
-- Responsive design
-- Performance optimization
-- Modern JavaScript frameworks
-
----
-
-## 🛠 Tech Stack
-
+- React.js
+- JavaScript (ES6+)
 - HTML5
 - CSS3
-- JavaScript (ES6+)
-- React.js
 - Tailwind CSS
-- Vite
+- React Router
+- Context API
+- REST APIs
 - Git & GitHub
 
 ---
 
 ## 📂 Featured Projects
 
-### 🛍 E-commerce Website
-- Responsive online shopping UI
-- Product filtering & cart functionality
-- Built with React + Tailwind CSS
+### 🛍 NextBuy – E-Commerce Application
+- Authentication & protected routes
+- REST API integration using Axios
+- Dynamic cart with total calculation
+- Global state management using Context API
+- Data persistence using Local Storage
 
-### 🎨 Portfolio Website
-- Personal branding website
-- Smooth animations
-- Fully responsive layout
-
-### 🧠 Coding Practice Projects
-- JavaScript problem solving
-- DOM manipulation projects
-- Mini applications
+### 📝 Task Management Application
+- Full CRUD functionality
+- Dark mode using Context API
+- Multi-page routing with React Router
+- Persistent storage using Local Storage
 
 ---
 
-## 🌐 Live Demo
+## 💼 Background
 
-👉 (Add your deployed link here if hosted on Vercel/Netlify)
-
----
-
-## 📸 Screenshots
-
-(Add project screenshots here)
+With 2 years of experience working on large-scale applications like Amazon Flex and Uber Eats, I bring a strong quality-first mindset and deep understanding of user experience to frontend development.
 
 ---
 
-## 📬 Contact Me
+## 📫 Connect With Me
 
-- 📧 Email: your-email@example.com
-- 💼 LinkedIn: (Add your LinkedIn link)
-- 🖥 GitHub: https://github.com/Maneesha-sudo
-
----
-
-## ⭐ Show Your Support
-
-If you like this project, please consider giving it a ⭐ on GitHub!
+📧 matetimaneesha4@gmail.com  
+🔗 GitHub: https://github.com/Maneesha-sudo  
+🔗 LinkedIn: (Add your LinkedIn profile link)
 
 ---
 
-### Thank you for visiting my portfolio! 🚀
+⭐ Feel free to explore the projects and share feedback!
