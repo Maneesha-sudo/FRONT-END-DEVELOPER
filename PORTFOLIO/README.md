@@ -51,7 +51,7 @@ With 2 years of experience working on large-scale applications like Amazon Flex 
 
 📧 matetimaneesha4@gmail.com  
 🔗 GitHub: https://github.com/Maneesha-sudo  
-🔗 LinkedIn: (Add your LinkedIn profile link)
+🔗 LinkedIn: https://www.linkedin.com/in/mateti-maneesha/
 
 ---
 
