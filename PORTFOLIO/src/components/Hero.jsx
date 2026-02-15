@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* Download CV Button */}
         <a
-          href="/resume.pdf"
+          href="/Maneesha_Mateti_Resume.pdf"
           download
           className="px-8 py-3 rounded-full border border-gray-600 hover:bg-slate-800 transition duration-300"
         >
